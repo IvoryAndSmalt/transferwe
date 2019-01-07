@@ -171,6 +171,14 @@ include 'header.php';
         <form id="contact" action="page.php" method="post">
             <h3>Nom</h3>
             <h4>Ajoutez vos fichiers</h4>
+            <input type="file" name="icone" id="icone" /><br />
+                <label for="mon_fichier">Fichier (tous formats | max. 1 Mo) :</label><br />
+                <input type="hidden" name="MAX_FILE_SIZE" value="1048576" />
+                <input type="file" name="mon_fichier" id="mon_fichier" /><br />
+                <label for="titre">Titre du fichier (max. 50 caractères) :</label><br />
+                <input type="text" name="titre" value="Titre du fichier" id="titre" /><br />
+        
+
             <fieldset>
                 <label for="envoyer">Envoyer à </label>
                 <input name="envoyer" id="email" placeholder="Envoyer à" type="text" tabindex="2">
