@@ -16,13 +16,14 @@ function getAllFiles(){
 }
 
 //Cette fonction est appelée à la fin du Controller, elle sert à insérer un lien de fichier dans la table.
-function insertLink($nom, $codeg, $lien){
+function insertLink($nom, $codeg, $lien, $today){
 	global $dbh;
 
-	$inserted_link = $dbh->prepare('INSERT INTO fichiers(nom, codeg, lien) VALUES (?,?,?)');
-	$inserted_link->execute([$nom, $codeg, $lien]);
+	$inserted_link = $dbh->prepare('INSERT INTO fichiers(nom, codeg, lien, date) VALUES (?,?,?,?)');
+	$inserted_link->execute([$nom, $codeg, $lien, $today]);
 }
 
+//Cette fonction donne toutes les informations d'un lien en fonction du lien cliqué par les utilisateurs.
 function getOneLink($link){
 	global $dbh;
 
