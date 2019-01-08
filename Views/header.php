@@ -18,8 +18,7 @@
 </head>
 <body>
 
-<!-- Behold, the field in which I grow my PHP. Lay thine eyes upon it and thou shalt see that it is barren.  
-        A.K.A. navigation in pure JS, because I can. -->
+    <header id="header" class="">
 
     <header >
        

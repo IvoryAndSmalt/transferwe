@@ -1,9 +1,6 @@
 <?php
-
-$title = "Home";
-
+$title = "TransferWe : Accueil";
 include 'header.php';
-
 ?>
 
 </head>
@@ -167,7 +164,7 @@ include 'header.php';
     </script>
              
 
+</form>
 
-    <?php
-
+<?php
 include 'footer.php';
