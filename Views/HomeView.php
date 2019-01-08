@@ -5,15 +5,6 @@ $title = "Home";
 include 'header.php';
 
 ?>
-<link rel="stylesheet" href="assets/css/style.css">
-<link rel="stylesheet" href="assets/css/HomeView.css">
-<link href="assets/js/script.js" rel="stylesheet" />
-<link href="assets/css/bootstrap.css" rel="stylesheet" />
-<link href="assets/css/rotating-card.css" rel="stylesheet" />
-<link href="https://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
-<script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js"></script>
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-    crossorigin="anonymous">
 
 </head>
 
@@ -96,6 +87,33 @@ include 'header.php';
         </div>
     </div>
 </div>
+<script>
+        $().ready(function(){
+    $('[rel="tooltip"]').tooltip();
+
+    });
+
+    function rotateCard(btn){
+    var $card = $(btn).closest('.card-container');
+    console.log($card);
+    if($card.hasClass('hover')){
+        $card.removeClass('hover');
+    } else {
+        $card.addClass('hover');
+    }
+    }
+
+
+
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-46172202-4', 'auto');
+    ga('send', 'pageview');
+
+</script>
 
 
     <script>
