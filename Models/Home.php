@@ -23,6 +23,7 @@ function insertLink($nom, $codeg, $lien){
 	$inserted_link->execute([$nom, $codeg, $lien]);
 }
 
+//Cette fonction donne toutes les informations d'un lien en fonction du lien cliqué par les utilisateurs.
 function getOneLink($link){
 	global $dbh;
 
