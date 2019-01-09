@@ -24,11 +24,11 @@ function insertLink($nom, $codeg, $lien, $today){
 }
 
 //Cette fonction donne toutes les informations d'un lien en fonction du lien cliqué par les utilisateurs.
-function getOneLink($link){
+function getOneLink($codeg){
 	global $dbh;
 
-	$one_link = $dbh->prepare('SELECT * FROM fichiers WHERE lien = ?');
-	$one_link->execute([$link]);
+	$one_link = $dbh->prepare('SELECT * FROM fichiers WHERE codeg = ?');
+	$one_link->execute([$codeg]);
 
 	return $one_link->fetchAll();
 }
