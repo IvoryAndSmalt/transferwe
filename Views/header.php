@@ -16,11 +16,5 @@
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="row">
-            <div class="col-sm-10 col-sm-offest-1">
             <img id="logo" src="assets/img/logo1.png" alt="Logo" href="#Home">
-            </div>
-            </div>
-        </div>
     </header>
