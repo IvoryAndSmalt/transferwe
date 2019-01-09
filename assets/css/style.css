@@ -144,7 +144,6 @@ textarea {
 /***************************************/
 
 body {
-	background-color: rgba(0, 0, 0, 0.829) !important;
 	background-image: url(../img/background1.png) !important;
 	background-size: cover !important;
 	overflow-x: hidden;
@@ -182,9 +181,8 @@ body {
 header 
 
 #logo {
-	width: 40%;
-	margin-bottom: 15%;
-	margin-top: -20px;
+	width: 50%;
+	margin:auto ;
 
 }
 
