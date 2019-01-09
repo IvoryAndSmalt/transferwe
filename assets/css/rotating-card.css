@@ -9,6 +9,7 @@ body {
 .btn:active{
     outline: 0 !important;
 }
+
 /* entire container, keeps perspective */
 .card-container {
 	  -webkit-perspective: 800px;

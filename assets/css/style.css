@@ -55,15 +55,16 @@ input, textarea{
 /***************************************/
 
 body{
-	background-color: rgba(0, 0, 0, 0.829) !important;
+	background-color: rgb(0, 0, 0) !important;
 	background-image: url(../img/background1.png)!important;
 	background-size:cover!important;
-	
+	overflow: hidden;
 	font-family: "Roboto", Helvetica, Arial, sans-serif;
   	font-weight: 100;
   	font-size: 12px;
   	line-height: 30px;
- 	 color: #777;
+	  color: #777;
+	  padding-top: ;
 }
 
 .moving-clouds {
