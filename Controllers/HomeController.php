@@ -1,6 +1,6 @@
 <?php
 
-// include('Models/Home.php');
+include('Models/Home.php');
 
 // //On affiche le texte de départ
 // $upload_status = "Veuillez ajouter un fichier";
@@ -80,7 +80,38 @@
 //         $upload_status = "Echec de l'envoi, veuillez réessayer.";
 //     }
 // };
+
 // $lien = $base_url.$_FILES['mon_fichier']['name'];
+
+// $codeg = pathinfo($_ourname)['filename'];
+// $lien = $base_url."files/".$_ourname;
+// $zip = new ZipArchive();
+// // remplacer temp par le $newcode.zip
+// $myzip = $newcode.".zip";
+// echo $myzip;
+// if ($zip->open($myzip, ZipArchive::CREATE) === TRUE) {
+//   if($zip->addFile($lien)){
+//     echo "file added";
+//   }
+//   else{
+//     echo "file adding failed";
+//   }
+    
+// // si on a réussi à ajouter le fichier dans l'archive, on le supprime
+// //use unlink() to delete old file when zip is moved
+// // move zip to files/
+//   $zip->close();
+//   $ziplink = "files/".$myzip;
+//   $downloadlink = $base_url."files/".$myzip;
+//   rename($myzip, $ziplink);
+// }
+
+
+// //$ziplink doit correspondre à https://username.promo-24.codeur.online/transferwe/files/zfEijf4e.zip
+
+// // add move zip to download folder
+// echo "<a href=".$downloadlink.">cliquez ici pour télécharger l'archive</a>";
+
 
 // // On donne des noms de varialbes à toutes les variables pour que ce soit plus clair dans le mail.
 // $nom_fichier = strip_tags($_fichier);
