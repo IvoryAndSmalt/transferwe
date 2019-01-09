@@ -13,59 +13,64 @@ include 'header.php';
                 <div class="card">
                     <div class="front">
                         <div class="user">
-                            <img class="img-circle" src="assets/img/plume.png"/>
+                            <img class="img" src="assets/img/plume.png"/>
                         </div>
                         <div class="content">
                             <div class="main">
-                                <h3 class="name"></h3>
-                                <p class="profession">Web Developer</p>
-                                <p class="text-center">Tu as pleins de fichiers à envoyer ? N'hésites pas
+                            <h1 class="text-center">LoadXpress</h1>
+                                <h3 class="name">L'envoi simple & rapide</h3>
+                                <p class="text-center">Qui sommes nous ? <br>Une jeune équipe dynamique et motivée qui viennent à votre secours pour vos transferts de fichiers !</p>
+                                </div>
+                                <p class="text-center">Tu as pleins de fichiers à envoyer ?<br>N'hésites pas
                                 une seconde ! <br>Clique juste en dessous ^^</p>
                             </div>
                             <div class="footer">
-                                <button class="btn btn-simple" onclick="rotateCard(this)">
-                                    </i> <i class="fas fa-file-export"></i>Partager votre fichier
+                                <button class="btn btn-warning" id="share" onclick="rotateCard(this)">
+                                    </i> <i class="fas fa-file-export"> <br></i>Partager
                                 </button>
                             </div>
-                        </div>
+                            <div class="social-links text-center">
+                                <a href="" class="facebook"><i class="fab fa-facebook-square"></i></a>
+                                <a href="" class="google"><i class="fab fa-google-plus-g"></i></a>
+                                <a href="" class="twitter"><i class="fab fa-twitter"></i></a>
+                            </div>
+                     
                     </div> <!-- end front panel -->
 
 
                     <div class="back">
-                        <div class="header">
-                            <h5 class="motto">"To be or not to be, this is my awesome motto!"</h5>
+                        <div class="user">
+                            <img class="img" src="assets/img/plume.png"/>
                         </div>
                         <div class="content">
-                        <div class="main">
-
                             <form id="contact" action="index.php" method="POST" enctype="multipart/form-data">
                                 <!-- <span class="textnone"><?=$upload_status?></span> -->
                                 <h3>Envoyer vos fichiers ici !</h3>
-                                <label for="mon_fichier">Fichier (tous formats | max. 2 Go) :</label><br />
+                                <label for="mon_fichier">Fichier (tous formats | max. 2 Go)</label><br />
                                 <input type="hidden" name="MAX_FILE_SIZE" value="2000000000" />
                                 <input type="file" name="mon_fichier" id="mon_fichier" /><br />
 
                                 <fieldset>
-                                    <label for="destinataire">Envoyer à </label>
+                                  
                                     <input name="destinataire" id="destinataire" placeholder="Envoyer à" type="text"
                                         tabindex="2">
                                     <p class="errorMessage"></p>
                                 </fieldset>
                                 <!-- Rajouter le nom si besoin -->
                                 <fieldset>
-                                    <label for="nom">Votre nom : </label>
+                                    
                                     <input name="nom" id="nom" placeholder="Votre nom" type="text" tabindex="1"
                                         autofocus>
                                     <p class="errorMessage"></p>
                                 </fieldset>
                                 <fieldset>
-                                    <label for="expediteur">Votre adresse e-mail : </label>
+                                    
                                     <input name="expediteur" id="expediteur" placeholder="Votre email" type="text"
                                         tabindex="2">
                                     <p class="errorMessage"></p>
                                 </fieldset>
                                 <fieldset>
-                                    <label for="message">Votre message : </label>
+                                    
                                     <textarea name="message" id="message" placeholder="Votre message..."
                                         tabindex="5"></textarea>
                                     <p class="errorMessage"></p>
@@ -74,8 +79,17 @@ include 'header.php';
                                     <button name="submitBtn" type="submit" id="contact-submit" data-submit="...Sending">Transférer</button>
                                 </fieldset>
                             </form>  <!-- CONTACT FORM -->
-                        
-                        </div> 
+                           
+                            <div class="retour">
+                                <button class="btn btn-warning" onclick="rotateCard(this)">
+                                <i class="fas fa-undo-alt"></i><br>
+                                </button>
+                            </div>
+                            <div class="social-links text-center">
+                                <a href="" class="facebook"><i class="fab fa-facebook-square"></i></a>
+                                <a href="" class="google"><i class="fab fa-google-plus-g"></i></a>
+                                <a href="" class="twitter"><i class="fab fa-twitter"></i></a>
+                            </div>
                     </div> <!-- end back panel -->
                 </div> 
              </div> 
@@ -84,33 +98,33 @@ include 'header.php';
         </div>
     </div>
 </div>
-<script>
-        $().ready(function(){
-    $('[rel="tooltip"]').tooltip();
+    <script>
+            $().ready(function(){
+        $('[rel="tooltip"]').tooltip();
 
-    });
+        });
 
-    function rotateCard(btn){
-    var $card = $(btn).closest('.card-container');
-    console.log($card);
-    if($card.hasClass('hover')){
-        $card.removeClass('hover');
-    } else {
-        $card.addClass('hover');
-    }
-    }
+        function rotateCard(btn){
+        var $card = $(btn).closest('.card-container');
+        console.log($card);
+        if($card.hasClass('hover')){
+            $card.removeClass('hover');
+        } else {
+            $card.addClass('hover');
+        }
+        }
 
 
 
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    ga('create', 'UA-46172202-4', 'auto');
-    ga('send', 'pageview');
+        ga('create', 'UA-46172202-4', 'auto');
+        ga('send', 'pageview');
 
-</script>
+    </script>
 
 
     <script>
