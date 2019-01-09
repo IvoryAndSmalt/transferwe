@@ -143,6 +143,7 @@ textarea {
 /***************END OF RESET************/
 /***************************************/
 
+<<<<<<< HEAD
 body {
 	background-color: rgba(0, 0, 0, 0.829) !important;
 	background-image: url(../img/background1.png) !important;
@@ -153,6 +154,19 @@ body {
 	font-size: 12px;
 	line-height: 30px;
 	color: #777;
+=======
+body{
+	background-color: rgb(0, 0, 0) !important;
+	background-image: url(../img/background1.png)!important;
+	background-size:cover!important;
+	overflow: hidden;
+	font-family: "Roboto", Helvetica, Arial, sans-serif;
+  	font-weight: 100;
+  	font-size: 12px;
+  	line-height: 30px;
+	  color: #777;
+	  padding-top: ;
+>>>>>>> 2e14354ec1687dad296663bfbda705ffc8076c96
 }
 
 .moving-clouds {
