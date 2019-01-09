@@ -3,11 +3,7 @@ $title = "TransferWe : Accueil";
 include 'header.php';
 ?>
 
-</head>
-
-<body>
 <div class="moving-clouds" style="background-image: url('assets/img/clouds.png'); ">
-
 </div>
 <div class="container">
     <div class="row">
@@ -47,7 +43,7 @@ include 'header.php';
                         </div>
                         <div class="content">
                             <form id="contact" action="index.php" method="POST" enctype="multipart/form-data">
-                                <!-- <span class="textnone"><?=$upload_status?></span> -->
+                                <!-- <span class="textnone"><?= $upload_status ?></span> -->
                                 <h3>Envoyer vos fichiers ici !</h3>
                                 <label for="mon_fichier">Fichier (tous formats | max. 2 Go)</label><br />
                                 <input type="hidden" name="MAX_FILE_SIZE" value="2000000000" />
@@ -181,9 +177,6 @@ include 'header.php';
             }
         });
     </script>
-             
-
 </form>
-
 <?php
 include 'footer.php';
