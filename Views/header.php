@@ -16,5 +16,5 @@
 </head>
 <body>
     <header>
-            <img id="logo" src="assets/img/logo1.png" alt="Logo" href="#Home">
+            <img id="logo" src="assets/img/logo.png" alt="Logo" href="#Home">
     </header>
