@@ -121,7 +121,7 @@ $subject = iconv("UTF-8", "ISO-8859-1//TRANSLIT", ("Nouveau fichier disponible s
 //On appelle la fonction insertLink (voir Models/Home.php) qui insère le lien du fichier qu'on vient d'uploader dans la BDD.
 $today = date("Y-m-d");
 if(isset($nom_fichier) && !empty($nom_fichier) && isset($codeg) && !empty($codeg)){
-    insertLink($nom_fichier, $codeg, $lien, $today);
+   insertLink($nom_fichier, $codeg, $lien, $today);
 }
 
 // On envoie deux mails : un pour la personne à qui envoyer le mail, et un autre à l'expéditeur pour la confirmation de l'envoi.
