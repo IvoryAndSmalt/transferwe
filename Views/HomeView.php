@@ -6,6 +6,9 @@ include 'header.php';
 </head>
 
 <body>
+<div class="moving-clouds" style="background-image: url('assets/img/clouds.png'); ">
+
+</div>
 <div class="container">
     <div class="row">
         <div class="col-sm-10 col-sm-offest-1">
@@ -97,7 +100,9 @@ include 'header.php';
             
         </div>
     </div>
+   
 </div>
+
     <script>
             $().ready(function(){
         $('[rel="tooltip"]').tooltip();
