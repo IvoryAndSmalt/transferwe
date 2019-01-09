@@ -80,7 +80,25 @@ if(isset($_FILES['mon_fichier'])) {
         $upload_status = "Echec de l'envoi, veuillez réessayer.";
     }
 };
-$lien = $base_url.$_FILES['mon_fichier']['name'];
+
+
+$lien = $base_url."files/".$codeg;
+//$zip = new ZipArchive();
+//remplacer temp par le $newcode.zip
+//$myzip = "temp.zip";
+
+//if ($zip->open($myzip, ZipArchive::CREATE) === TRUE) {
+	//$zip->addFile($lien);
+//$zip->addFile($lefzk);
+//si on a réussi à ajouter le fichier dans l'archive, on le supprime
+	//$zip->close();
+//}
+
+//add move zip to download folder
+//echo "<a href=".$myzip.">myzip</a>";
+
+
+
 
 // On donne des noms de varialbes à toutes les variables pour que ce soit plus clair dans le mail.
 $nom_fichier = strip_tags($_fichier);
@@ -90,8 +108,7 @@ $message_envoi = strip_tags($_POST['message']);
 $nom_exped = strip_tags($_POST['nom']);
 $mail_exped = strip_tags($_POST['expediteur']);
 $mail_dest = strip_tags($_POST['destinataire']);
-$subject = iconv("UTF-8", "ISO-8859-1//TRANSLIT", ($nom_exped." vous a transféré un fichier."));
-$expedsubject = iconv("UTF-8", "ISO-8859-1//TRANSLIT", ("Votre transfert LoadXPress a bien été effectué"));
+$subject = iconv("UTF-8", "ISO-8859-1//TRANSLIT", ("Nouveau fichier disponible sur LoadXPress"));
 
 //On appelle la fonction insertLink (voir Models/Home.php) qui insère le lien du fichier qu'on vient d'uploader dans la BDD.
 $today = date("Y-m-d");
@@ -101,7 +118,7 @@ if(isset($nom_fichier) && !empty($nom_fichier) && isset($codeg) && !empty($codeg
 
 // On envoie deux mails : un pour la personne à qui envoyer le mail, et un autre à l'expéditeur pour la confirmation de l'envoi.
 $header="MIME-Version: 1.0\r\n";
-$header.='From: <lucas@lucasvandenberg.fr>'."\n";
+$header.='From: <'.$mail_exped.'>'."\n";
 $header.='Reply-To: <lucas@lucasvandenberg.fr>'."\n";
 $header.='Content-Type:text/html; charset="utf-8"'."\n";
 $header.='Content-Transfer-Encoding: 8bit';
@@ -219,7 +236,7 @@ $message='<!doctype html>
                       <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
                         <tbody>
                           <tr>
-                            <td style="width:400px;"><img height="auto" src="logo.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;"
+                            <td style="width:400px;"><img height="auto" src="'.$base_url.'assets/data/logo.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;"
                                 width="400"></td>
                           </tr>
                         </tbody>
@@ -272,7 +289,7 @@ $message='<!doctype html>
                       <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
                         <tbody>
                           <tr>
-                            <td style="width:240px;"><img height="auto" src="plume.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;"
+                            <td style="width:240px;"><img height="auto" src="'.$base_url.'assets/data/plume.png" style="border:0;display:block;outline:none;text-decoration:none;height:auto;width:100%;"
                                 width="240"></td>
                           </tr>
                         </tbody>
@@ -320,7 +337,7 @@ $message='<!doctype html>
                           <td align="center" bgcolor="#354552" role="presentation" style="border:none;border-radius:3px;cursor:auto;padding:10px 25px;background:#354552;"
                             valign="middle">
                             <p style="background:#354552;color:#ffffff;font-family:Georgia, Helvetica, Arial, sans-serif;font-size:14px;font-weight:normal;line-height:120%;Margin:0;text-decoration:none;text-transform:none;">
-                            <a href="'.$base_url.'Fichier/'.$codeg.'" target="_blank">Récupérer vos fichiers</a></p>
+                            <a href="'.$base_url.'Download/?codeg='.$codeg.'" target="_blank">Récupérer vos fichiers</a></p>
                           </td>
                         </tr>
                       </table>
@@ -416,7 +433,7 @@ $message='<!doctype html>
 </html>';
 
 mail($mail_dest, $subject, $message, $header);
-mail($mail_exped, $expedsubject, iconv("UTF-8", "ISO-8859-1//TRANSLIT", ("le fichier ".$nom_fichier." a bien été transféré. Lien : ".$lien)));
+mail($mail_exped, $subject, $message, $header);
 
 $onelink = getOneLink("https://www.lucasvandenberg.fr/transferwe/files/AgkY3NoN.php");
 foreach ($onelink as $value) {
