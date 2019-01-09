@@ -144,6 +144,7 @@ textarea {
 /***************************************/
 
 body {
+	
 	background-image: url(../img/background1.png) !important;
 	background-size: cover !important;
 	overflow-x: hidden;
@@ -178,11 +179,11 @@ body {
 }
 
 /* HEADER */
-header 
 
 #logo {
 	width: 50%;
-	margin:auto ;
+	margin-bottom: 15%;
+
 
 }
 
@@ -205,6 +206,6 @@ h1 {
 
 @media screen and (min-width: 768px) {
 	#logo {
-		width: 30%;
+		width:%;
 	}
 }

@@ -18,7 +18,7 @@ include 'header.php';
                             <div class="main">
                             <h1 class="text-center">LoadXpress</h1>
                                 <h3 class="name">L'envoi simple & rapide</h3>
-                                <p class="text-center">Qui sommes nous ? <br>Une équipe dynamique et motivée qui vient à votre secours pour vos transferts de fichiers !</p>
+                                <p class="text-center">Qui sommes nous ? <br>Une jeune équipe dynamique et motivée qui viennent à votre secours pour vos transferts de fichiers !</p>
                                 </div>
                                 <p class="text-center">Tu as pleins de fichiers à envoyer ?<br>N'hésites pas
                                 une seconde ! <br>Clique juste en dessous ^^</p>
@@ -35,6 +35,7 @@ include 'header.php';
                             </div>
                      
                     </div> <!-- end front panel -->
+
 
 
                     <div class="back">
@@ -99,7 +100,8 @@ include 'header.php';
    
 </div>
 
-    <script>
+
+<script>
             $().ready(function(){
         $('[rel="tooltip"]').tooltip();
 
@@ -177,6 +179,6 @@ include 'header.php';
             }
         });
     </script>
-</form>
+
 <?php
 include 'footer.php';
