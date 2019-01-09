@@ -37,6 +37,7 @@ include 'header.php';
                     </div> <!-- end front panel -->
 
 
+
                     <div class="back">
                         <div class="user">
                             <img class="img" src="assets/img/plume.png"/>
@@ -99,7 +100,8 @@ include 'header.php';
    
 </div>
 
-    <script>
+
+<script>
             $().ready(function(){
         $('[rel="tooltip"]').tooltip();
 
@@ -177,6 +179,6 @@ include 'header.php';
             }
         });
     </script>
-</form>
+
 <?php
 include 'footer.php';

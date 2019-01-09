@@ -145,7 +145,7 @@ textarea {
 
 body {
 	
-	background-image: url(../img/background1.png) !important;
+	background: url(../img/background1.png)  no-repeat!important;
 	background-size: cover !important;
 	overflow-x: hidden;
 	font-family: "Roboto", Helvetica, Arial, sans-serif;
@@ -181,8 +181,9 @@ body {
 /* HEADER */
 
 #logo {
-	width: 50%;
-	margin-bottom: 15%;
+	width: 20%;
+	margin-bottom:20px;
+	
 
 
 }
@@ -204,8 +205,8 @@ h1 {
 
 /* MEDIAQUERIES */
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 575px) {
 	#logo {
-		width:%;
+		
 	}
 }
