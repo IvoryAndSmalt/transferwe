@@ -102,12 +102,17 @@ if ($zip->open($myzip, ZipArchive::CREATE) === TRUE) {
 };
 
 
-
 // On donne des noms de varialbes à toutes les variables pour que ce soit plus clair dans le mail.
 if(isset($nom_fichier)){
-  $nom_fichier = strip_tags($_fichier);
+  $nom_fichier = strip_tags($nom_fichier);
   $codeg = pathinfo($_ourname)['filename'];
   $lien = $base_url.$myzip;
+  $today = date("Y-m-d");
+  echo($nom_fichier);
+  echo($codeg);
+  echo($lien);
+  echo($today);
+  insertLink($nom_fichier, $codeg, $lien, $today);
 }
 if(isset($_POST['message']) && isset($_POST['nom']) && isset($_POST['expediteur']) && isset($_POST['destinataire'])){
   $message_envoi = strip_tags($_POST['message']);
@@ -119,10 +124,10 @@ if(isset($_POST['message']) && isset($_POST['nom']) && isset($_POST['expediteur'
 $subject = iconv("UTF-8", "ISO-8859-1//TRANSLIT", ("Nouveau fichier disponible sur LoadXPress"));
 
 //On appelle la fonction insertLink (voir Models/Home.php) qui insère le lien du fichier qu'on vient d'uploader dans la BDD.
-$today = date("Y-m-d");
-if(isset($nom_fichier) && !empty($nom_fichier) && isset($codeg) && !empty($codeg)){
-   insertLink($nom_fichier, $codeg, $lien, $today);
-}
+// $today = date("Y-m-d");
+// if(isset($nom_fichier) && !empty($nom_fichier) && isset($codeg) && !empty($codeg)){
+//    insertLink($nom_fichier, $codeg, $lien, $today);
+// }
 
 // On envoie deux mails : un pour la personne à qui envoyer le mail, et un autre à l'expéditeur pour la confirmation de l'envoi.
 $header="MIME-Version: 1.0\r\n";
