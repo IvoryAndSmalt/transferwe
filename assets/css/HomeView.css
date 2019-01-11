@@ -187,3 +187,11 @@ fieldset {
 }
 
 
+}
+
+
+@media (min-width: 576px) {
+  .container{
+    max-width: 600px;
+  }
+}
