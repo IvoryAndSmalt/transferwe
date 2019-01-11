@@ -1,12 +1,11 @@
- <?php
-$title = "TransferWe : Accueil";
+<?php
+$title = "TransferWe : Download";
 
 include 'header.php';
 
 ?>
-
 </head>
-
+<img src="backgrounddl.png">;
 <body>
 
 <a href="<?=$lien?>" title="<?=$nom?>">Télécharger</a>
