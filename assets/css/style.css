@@ -192,6 +192,13 @@ h1 {
 	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.97), 0 0 25px #dbdcde, 0 0 5px #0808ff80;
 }
 
+.fa-smile-wink {
+
+	color: #085193 !important;
+	font-size:20px;
+	margin-left:5px;
+}
+
 .text-center {
 	margin-top: 20px !important;
 

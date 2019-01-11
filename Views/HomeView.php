@@ -21,7 +21,7 @@ include 'header.php';
                                 <p class="text-center">Qui sommes nous ? <br>Une jeune équipe dynamique et motivée qui viennent à votre secours pour vos transferts de fichiers !</p>
                                 </div>
                                 <p class="text-center">Tu as pleins de fichiers à envoyer ?<br>N'hésites pas
-                                une seconde ! <br>Clique juste en dessous ^^</p>
+                                une seconde ! <br>Clique juste en dessous<i class="fas fa-smile-wink"></i></p>
                             </div>
                             <div class="footer">
                                 <button class="btn btn-warning" id="share" onclick="rotateCard(this)">
@@ -45,34 +45,41 @@ include 'header.php';
                         <div class="content">
                             <form id="contact" action="index.php" method="POST" enctype="multipart/form-data">
                                 <!-- <span class="textnone"><?= $upload_status ?></span> -->
-                                <h3>Envoyer vos fichiers ici !</h3>
-                                <label for="mon_fichier">Fichier (tous formats | max. 2 Go)</label><br />
-                                <input type="hidden" name="MAX_FILE_SIZE" value="2000000000" />
-                                <input type="file" name="mon_fichier" id="mon_fichier" /><br />
+                                
+                                <div class="fichier-upload">
+                               
+                                    <label for="mon_fichier">
+                                    
+                                        <img src="assets/img/oploado.png" id="upload"/>Ajoutez vos fichiers ici</label><br />
+                                    </label>
+                                   
+                                    <input type="hidden" name="MAX_FILE_SIZE" value="2000000000" />
+                                    <input id="mon_fichier" name="mon_fichier" type="file"/>
+                                </div>
 
                                 <fieldset>
                                   
                                     <input name="destinataire" id="destinataire" placeholder="Envoyer à" type="text"
-                                        tabindex="2">
+                                        tabindex="1">
                                     <p class="errorMessage"></p>
                                 </fieldset>
                                 <!-- Rajouter le nom si besoin -->
                                 <fieldset>
                                     
-                                    <input name="nom" id="nom" placeholder="Votre nom" type="text" tabindex="1"
+                                    <input name="nom" id="nom" placeholder="Votre nom" type="text" tabindex="2"
                                         autofocus>
                                     <p class="errorMessage"></p>
                                 </fieldset>
                                 <fieldset>
                                     
                                     <input name="expediteur" id="expediteur" placeholder="Votre email" type="text"
-                                        tabindex="2">
+                                        tabindex="3">
                                     <p class="errorMessage"></p>
                                 </fieldset>
                                 <fieldset>
                                     
                                     <textarea name="message" id="message" placeholder="Votre message..."
-                                        tabindex="5"></textarea>
+                                        tabindex="4"></textarea>
                                     <p class="errorMessage"></p>
                                 </fieldset>
                                 <fieldset>
@@ -81,7 +88,7 @@ include 'header.php';
                             </form>  <!-- CONTACT FORM -->
                            
                             <div class="retour">
-                                <button class="btn btn-warning" onclick="rotateCard(this)">
+                                <button class="btn btn" onclick="rotateCard(this)">
                                 <i class="fas fa-undo-alt"></i><br>
                                 </button>
                             </div>

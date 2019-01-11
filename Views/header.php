@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/HomeView.css">
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <link href="assets/css/rain.css" rel="stylesheet" />
     <link href="assets/css/rotating-card.css" rel="stylesheet" />
     <link href="https://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
