@@ -1,3 +1,23 @@
 body{
-    background-color:black!important;
+    
+    background: radial-gradient(circle at top left, rgb(9, 1, 24), rgba(4, 15, 58, 0.966))!important;
+    background-image:none;
+}
+/* #canvas{
+position: absolute;
+} */
+
+#errorpage{
+    color:white;
+    text-shadow: none;
+    display:block;
+    top:5%;
+    left:27%;
+    position:absolute;
+    font-size:60px;
+}
+
+#instructions{
+    position:absolute;
+    top:0;
 }
