@@ -1,9 +1,17 @@
 <?php
 $title = "TransferWe : 404";
 include 'header.php';
-?>
+?> 
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+             <h1 id="errorpage"> Error 404</h1>
+        </div>
+    </div>
+</div>
+   
         <div id="instructions">
-        <h1 class="h1" style="color:white";> Error 404</h1>
+       
         <canvas id="canvas">Canvas is not supported in your browser</canvas></div>
         <script>// Falling rain simulation using 2D canvas
                 // - vanilla JS, no frameworks
