@@ -29,9 +29,9 @@ include 'header.php';
                                 </button>
                             </div>
                             <div class="social-links text-center">
-                                <a href="" class="facebook"><i class="fab fa-facebook-square"></i></a>
-                                <a href="" class="google"><i class="fab fa-google-plus-g"></i></a>
-                                <a href="" class="twitter"><i class="fab fa-twitter"></i></a>
+                                <a href="https://fr-fr.facebook.com/" class="facebook"><i class="fab fa-facebook-square"></i></a>
+                                <a href="https://www.google.com/" class="google"><i class="fab fa-google-plus-g"></i></a>
+                                <a href="https://twitter.com/login?lang=fr" class="twitter"><i class="fab fa-twitter"></i></a>
                             </div>
                      
                     </div> <!-- end front panel -->

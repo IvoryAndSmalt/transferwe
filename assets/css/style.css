@@ -104,6 +104,7 @@ section {
 
 body {
 	line-height: 1;
+
 }
 
 ol,
@@ -183,9 +184,8 @@ body {
 #logo {
 	width: 20%;
 	margin-bottom:20px;
-	
-
-
+	padding-top: 30px;
+	margin-left: 30px;
 }
 
 h1 {

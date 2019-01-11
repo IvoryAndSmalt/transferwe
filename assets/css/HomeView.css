@@ -93,15 +93,22 @@ fieldset {
 
 #contact button[type="submit"] {
   cursor: pointer;
-  width: 100%;
+  width: 70%;
+  align-content: center;
   border: none;
-  background: #3189d5b5;
+  /* background: #3189d5b5 !important; */
+  background: #4893D8 !important;
   color: #fcf5f5;
-  margin: 0 0 15px;
+  /* margin: 0 0 15px; */
+
+  display: block;
+  max-width: 300px;
+  margin: auto;
+  
   padding: 10px;
   font-size: 20px;
   border-radius: 10px;
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 #contact button[type="submit"]:hover {
@@ -153,4 +160,5 @@ fieldset {
 
 .retour {
   text-align: center;
+  margin-top: 8px;
 }
