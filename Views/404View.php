@@ -2,6 +2,8 @@
 $title = "TransferWe : 404";
 include 'header.php';
 ?> 
+<link href="assets/css/rain.css" rel="stylesheet" />
+
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
