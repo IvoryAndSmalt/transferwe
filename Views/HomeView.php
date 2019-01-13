@@ -4,15 +4,15 @@ include 'header.php';
 ?>
 <link rel="stylesheet" href="assets/css/HomeView.css">
 <link href="assets/css/rotating-card.css" rel="stylesheet" />
+<img id="logo" src="assets/img/logo.png" alt="Logo" href="Home">
 
 <div class="modaldiv" id="mobilemodal">
     <p id="mobilemodalp">
-        Un des champs sembble être incorrect. Veuillez vérifier les informations.
+        Un des champs semble être incorrect. Veuillez vérifier les informations.
     </p>
 </div>
 
-<div class="moving-clouds" style="background-image: url('assets/img/clouds.png'); ">
-</div>
+<div class="moving-fog" style ="background-image: url('assets/img/fog-low.png')"></div>
 <div class="container">
     <div class="row">
         <div class="col-sm-10 col-sm-offest-1">
