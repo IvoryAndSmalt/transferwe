@@ -144,52 +144,25 @@ textarea {
 /***************END OF RESET************/
 /***************************************/
 
+
+/* tous les styles sont à réaliser dans un format de 576 px; regler ensuite les problemes de taille d'ecran avec media queries */
 body {
 	
 	background: url(../img/background1.png)  no-repeat!important;
 	background-size: cover !important;
-	overflow-x: hidden;
+	overflow: hidden;
 	font-family: "Roboto", Helvetica, Arial, sans-serif;
 	font-weight: 100;
 	font-size: 12px;
 	line-height: 30px;
 	color: #777;
 }
-
-.moving-clouds {
-	position: absolute;
-	z-index: -1;
-	bottom: 0;
-	left: 0;
-	width: 250.625em;
-	height: 43.75em;
-	-webkit-animation: cloudLoop 80s linear infinite;
-	animation: cloudLoop 80s linear infinite;
-}
-
-@keyframes cloudLoop {
-	0% {
-		-webkit-transform: translate3d(0, 0, 0);
-		transform: translate3d(0, 0, 0);
-	}
-
-	100% {
-		-webkit-transform: translate3d(-50%, 0, 0);
-		transform: translate3d(-50%, 0, 0);
-	}
-}
-
 /* HEADER */
 
 #logo {
 	width: 20%;
-	margin-bottom:20px;
-	padding-top: 30px;
-	margin-left: 30px;
-}
-
-h1 {
-	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.97), 0 0 25px #dbdcde, 0 0 5px #0808ff80;
+	padding-top: 10px;
+	padding-left: 20px;
 }
 
 .fa-smile-wink {
@@ -204,9 +177,58 @@ h1 {
 
 }
 
-.container{
-	min-height: 1000px;
+/* page download */
+#file {
+	width: 20%;
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+	
 }
+
+
+:hover #file {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+#titredl{
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.97), 0 0 25px #dbdcde, 0 0 5px #0808ff80;
+}
+
+
+/* page 404 & home */
+.moving-fog {
+	position: absolute;
+	z-index: -1;
+	bottom: 0;
+	left: 0;
+	width: 250.625em;
+	height: 43.75em;
+	-webkit-animation: fogLoop 80s linear infinite;
+	animation: fogLoop 80s linear infinite;
+}
+
+@keyframes fogLoop {
+	0% {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+
+	100% {
+		-webkit-transform: translate3d(-50%, 0, 0);
+		transform: translate3d(-50%, 0, 0);
+	}
+}
+
+
+
+
+
+/* .container{
+	min-height: 1000px;
+} */
 
 /* footer */
 

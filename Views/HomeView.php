@@ -2,9 +2,17 @@
 $title = "TransferWe : Accueil";
 include 'header.php';
 ?>
+<link rel="stylesheet" href="assets/css/HomeView.css">
+<link href="assets/css/rotating-card.css" rel="stylesheet" />
+<img id="logo" src="assets/img/logo.png" alt="Logo" href="Home">
 
-<div class="moving-clouds" style="background-image: url('assets/img/clouds.png'); ">
+<div class="modaldiv" id="mobilemodal">
+    <p id="mobilemodalp">
+        Un des champs semble être incorrect. Veuillez vérifier les informations.
+    </p>
 </div>
+
+<div class="moving-fog" style ="background-image: url('assets/img/fog-low.png')"></div>
 <div class="container">
     <div class="row">
         <div class="col-sm-10 col-sm-offest-1">
@@ -57,34 +65,47 @@ include 'header.php';
                                     <input id="mon_fichier" name="mon_fichier" type="file"/>
                                 </div>
 
-                                <fieldset>
-                                  
+                                <fieldset id="fsdest">
+                                    <div class="modaldiv" id="destmod">
+                                        <p id="destmodp">
+                                            Veuillez entrer un email valide.
+                                        </p>
+                                    </div>
                                     <input name="destinataire" id="destinataire" placeholder="Envoyer à" type="text"
                                         tabindex="1">
-                                    <p class="errorMessage"></p>
                                 </fieldset>
                                 <!-- Rajouter le nom si besoin -->
-                                <fieldset>
-                                    
+                                <fieldset id="fsnom">
+                                <div class="modaldiv" id="votrenommod">
+                                        <p id="votrenommodp">
+                                            Veuillez entrer votre nom.
+                                        </p>
+                                    </div>
                                     <input name="nom" id="nom" placeholder="Votre nom" type="text" tabindex="2"
                                         autofocus>
-                                    <p class="errorMessage"></p>
                                 </fieldset>
-                                <fieldset>
-                                    
+                                <fieldset id="fsexped">
+                                <div class="modaldiv" id="expedmod">
+                                        <p id="expedmodp">
+                                            Veuillez entrer un email valide.
+                                        </p>
+                                    </div>
                                     <input name="expediteur" id="expediteur" placeholder="Votre email" type="text"
                                         tabindex="3">
-                                    <p class="errorMessage"></p>
                                 </fieldset>
-                                <fieldset>
-                                    
+                                <fieldset id="fsmessage">
+                                <div class="modaldiv" id="messagemod">
+                                        <p id="messagemodp">
+                                            Veuillez entrer votre message.
+                                        </p>
+                                    </div>
                                     <textarea name="message" id="message" placeholder="Votre message..."
                                         tabindex="4"></textarea>
-                                    <p class="errorMessage"></p>
                                 </fieldset>
                                 <fieldset>
                                     <button name="submitBtn" type="submit" id="contact-submit" data-submit="...Sending">Transférer</button>
                                 </fieldset>
+
                             </form>  <!-- CONTACT FORM -->
                            
                             <div class="retour">
@@ -124,8 +145,6 @@ include 'header.php';
         }
         }
 
-
-
         (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
         (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
         m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -147,38 +166,73 @@ include 'header.php';
                 return true;
             }
         }
-        var form = document.getElementById("contact"); //on récupère la totalité du formulaire dans une variable
+
+        //on récupère la totalité du formulaire dans une variable
+        var form = document.getElementById("contact"); 
         form.addEventListener("submit", function (monEvenement) { //On ajoute un écouteur d'évènement sur le formulaire : Quand le formulaire est envoyé, on exécute le code contenu dans les accolades de "function() {}""
             monEvenement.preventDefault(); //On bloque le comportement par défaut du formulaire qui est normalement de s'envoyer.
+            console.log(window.innerWidth);
+
+            var mobilemodal = document.getElementById("mobilemodal");
             var nom = document.getElementById("nom");
             var email = document.getElementById("destinataire");
-            var message = document.getElementById("message"); //On stock les 3 champs à vérifier dans des variables différentes
-            if (nom.value.length <= 0) { //on vérifie que le nom n'est pas vide
-                var errorMessageBlock = nom.parentNode.getElementsByClassName("errorMessage"); //on remonte d'un noeud avec "parentNode" puis on sélectionne l'élement ayant pour classe "errorMessage" dans ce noeud parent, du coup ça ne sélectionne que le p qui est frère de l'input "nom" et pas tous les p ayant cette classe. Si on avait fait un document.getElementsByClassName(), on aurait eu les 3.
-                //getElementsByClassName renvoie un tableau d'élements vu qu'il peut y en avoir plusieurs. On sait qu'il n'y en a qu'un donc on peut directement viser la première case du tableau : 
-                var errorMessageBlock = errorMessageBlock[0];
-                errorMessageBlock.innerHTML = "Ce champ est obligatoire"; //on place le message entre <p> et </p>
-                errorMessageBlock.style.display = "block"; //on affiche le <p> concerné.
-            }
-            else if (email.value.length <= 0) {
-                //idem que le bloc précedent mais pour l'email vide
-                var errorMessageBlock = email.parentNode.getElementsByClassName("errorMessage");
-                var errorMessageBlock = errorMessageBlock[0];
-                errorMessageBlock.innerHTML = "Ce champ est obligatoire";
-                errorMessageBlock.style.display = "block";
-            }
-            else if (message.value.length <= 0) {
-                //idem que le bloc précedent mais pour le message vide
-                var errorMessageBlock = message.parentNode.getElementsByClassName("errorMessage");
-                var errorMessageBlock = errorMessageBlock[0];
-                errorMessageBlock.innerHTML = "Ce champ est obligatoire";
-                errorMessageBlock.style.display = "block";
+            var exped = document.getElementById("expediteur");
+            var message = document.getElementById("message");
+
+            var modals = document.getElementsByClassName('modaldiv');
+            var destmod = document.getElementById('destmod');
+            var votrenom = document.getElementById('votrenommod');
+            var expedmod = document.getElementById('expedmod');
+            var messagemod = document.getElementById('messagemod');
+            
+            
+            //On stock les 3 champs à vérifier dans des variables différentes
+            if (email.value.length <= 0) {
+                for (let i = 0; i < modals.length; i++) {
+                    modals[i].style.opacity = 0;
+                }
+                if(window.innerWidth<=576){
+                    mobilemodal.style.opacity = 1;
+                }
+                else{
+                    destmod.style.top = "-125%";
+                    destmod.style.opacity = 1;
+                }
             }
             else if (!verifMail(email)) { //Vérification que l'email est valide
-                var errorMessageBlock = email.parentNode.getElementsByClassName("errorMessage");
-                var errorMessageBlock = errorMessageBlock[0];
-                errorMessageBlock.innerHTML = "Veuillez entrer un email valide";
-                errorMessageBlock.style.display = "block";
+                for (let i = 0; i < modals.length; i++) {
+                    modals[i].style.opacity = 0;
+                }
+                destmod.style.top = "-125%";
+                destmod.style.opacity = 1;
+            }
+            else if (nom.value.length <= 0) { //on vérifie que le nom n'est pas vide
+                for (let i = 0; i < modals.length; i++) {
+                    modals[i].style.opacity = 0;
+                }
+                votrenom.style.top = "-100%";
+                votrenom.style.opacity = 1;
+            }
+            else if (exped.value.length <= 0) {
+                for (let i = 0; i < modals.length; i++) {
+                    modals[i].style.opacity = 0;
+                }
+                expedmod.style.top = "-125%";
+                expedmod.style.opacity = 1;
+            }
+            else if (!verifMail(exped)) { //Vérification que l'email est valide
+                for (let i = 0; i < modals.length; i++) {
+                    modals[i].style.opacity = 0;
+                }
+                expedmod.style.top = "-125%";
+                destmod.style.opacity = 1;
+            }
+            else if (message.value.length <= 0) {
+                for (let i = 0; i < modals.length; i++) {
+                    modals[i].style.opacity = 0;
+                }
+                messagemod.style.top = "-25%";
+                messagemod.style.opacity = 1;
             }
             else {
                 //Sinon, si aucun champ vide et email valide, on envoie le formulaire.
