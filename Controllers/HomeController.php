@@ -108,10 +108,6 @@ if(isset($nom_fichier)){
   $codeg = pathinfo($_ourname)['filename'];
   $lien = $base_url.$myzip;
   $today = date("Y-m-d");
-  echo($nom_fichier);
-  echo($codeg);
-  echo($lien);
-  echo($today);
   insertLink($nom_fichier, $codeg, $lien, $today);
 }
 if(isset($_POST['message']) && isset($_POST['nom']) && isset($_POST['expediteur']) && isset($_POST['destinataire'])){
