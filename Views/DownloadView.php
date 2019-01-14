@@ -6,14 +6,14 @@ include 'header.php';
 ?>
 <link rel="stylesheet" href="assets/css/HomeView.css">  
 
-<a href="Home" ><img id="logo" src="assets/img/logo.png" alt="Logo"></a>
+<a href="Home" id="hrefhome" ><img id="logo" src="assets/img/logo.png" alt="Logo"></a>
 
 <body>
 
 <div class="container">
     <div class="row">
     <h1 class="text-center" id="titredl">Bienvenue sur la page de téléchargement !</h1>
-    <a href="<?=$lien?>" title="<?=$nom?>"class="text-center"><img src="assets/img/file-download-o.png" alt="download your file" id="file" ></a> 
+    <a href="<?=$lien?>" title="<?=$nom?>"class="text-center" id="dl"><img src="assets/img/file-download-o.png" alt="download your file" id="file" ></a> 
     <h4 class="text-center">Télécharger votre fichier ici !</h4>
     </div>
     
