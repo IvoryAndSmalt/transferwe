@@ -13,7 +13,7 @@ include 'header.php';
     </p>
 </div>
 
-<?php if(isset($lien)){
+<?php if (isset($lien)) {
     ?>
         <div id="modalenvoi">
         <div id="envoimodalcontent">
@@ -24,12 +24,13 @@ include 'header.php';
         <h3 id="envoilien">
             Vous pouvez aussi utiliser le lien de partage ci-dessous :
         </h3>
-        <input type="text" id="partage">
+        <input type="text" id="partage" value="<?=$lien?>">
         </div>
         </div>
         <?php
-} 
-?>
+
+    }
+    ?>
 
 <div class="moving-fog" style ="background-image: url('assets/img/fog-low.png')"></div>
 <div class="container">
