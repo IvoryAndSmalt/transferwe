@@ -22,7 +22,8 @@ position: absolute;
 #instructions{
     position:absolute;
     top:0;
-    overflow: hidden;
+	overflow: hidden;
+	pointer-events: none;
 }
 
 .moving-clouds {

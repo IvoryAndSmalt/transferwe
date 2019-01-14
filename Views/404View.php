@@ -3,17 +3,16 @@ $title = "TransferWe : 404";
 include 'header.php';
 ?> 
 <link href="assets/css/404View.css" rel="stylesheet" />
-    <img id="logo" src="assets/img/logo.png" alt="Logo" href="Home">
+<a href="Home" ><img id="logo" src="assets/img/logo.png" alt="Logo"></a>
     <!-- <h1 id="errorpage"> Error 404</h1> -->
 
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
         <h1 > SORRY : Error 404</h1><br>
-             <h4> Notre équipe tente de régler ce problème, veuillez recharger la page ultérieurement svp</h4>
-             <h3>L'équipe LoadXpress.</h3>
+            <h4> Notre équipe tente de régler ce problème, veuillez recharger la page ultérieurement svp</h4>
+            <h3>L'équipe LoadXpress.</h3>
         </div>
-       
     </div>
 </div>
 
@@ -22,8 +21,6 @@ include 'header.php';
         
     <div class="moving-clouds" style="background-image: url('assets/img/clouds.png'); ">
     </div>
-    
-       
     <canvas id="canvas">Canvas is not supported in your browser</canvas>
 </div>
         <script>// Falling rain simulation using 2D canvas
