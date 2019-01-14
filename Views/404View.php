@@ -1,8 +1,11 @@
 <?php
 $title = "TransferWe : 404";
 include 'header.php';
+
 ?> 
+
 <link href="assets/css/404View.css" rel="stylesheet" />
+
 <a href="Home" ><img id="logo" src="assets/img/logo.png" alt="Logo"></a>
     <!-- <h1 id="errorpage"> Error 404</h1> -->
 
