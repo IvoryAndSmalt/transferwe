@@ -188,11 +188,6 @@ include 'header.php';
             }
         }
 
-        let fermermodal = document.getElementById('fermermodal');
-        fermermodal.addEventListener('click', function(){
-            document.getElementById('modalenvoi').style.display = "none";
-        });
-
         //verif presence de fichiers
         var upload = document.getElementById('uploadlabel');
         var int = setInterval(function(){ 
@@ -273,6 +268,11 @@ include 'header.php';
                 //Sinon, si aucun champ vide et email valide, on envoie le formulaire.
                 form.submit();
             }
+        });
+
+let fermermodal = document.getElementById('fermermodal');
+        fermermodal.addEventListener('click', function(){
+            document.getElementById('modalenvoi').style.display = "none";
         });
     </script>
 
