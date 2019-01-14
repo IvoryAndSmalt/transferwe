@@ -4,6 +4,7 @@ include 'header.php';
 ?>
 <link rel="stylesheet" href="assets/css/HomeView.css">
 <link href="assets/css/rotating-card.css" rel="stylesheet" />
+
 <a href="Home" ><img id="logo" src="assets/img/logo.png" alt="Logo"></a>
 
 <div class="modaldiv" id="mobilemodal">
@@ -11,6 +12,26 @@ include 'header.php';
         Un des champs semble être incorrect. Veuillez vérifier les informations.
     </p>
 </div>
+
+<?php if(isset($lien)){
+    ?>
+        <div id="modalenvoi">
+            
+            <div id="envoimodalcontent">
+            <p id="fermermodal">X</p>
+                <h2 id="envoititle">
+                    Félicitations, votre fichier est en ligne !<br>
+                    Votre correspondant a reçu un email permettant d'y accéder. 
+                </h2>
+                <h3 id="envoilien">
+                    Vous pouvez aussi utiliser le lien de partage ci-dessous :
+                </h3>
+                <input onClick="this.select();"type="text" id="partage" value="<?=$lien?>">
+            </div>
+        </div>
+        <?php
+}
+?>
 
 <div class="moving-fog" style ="background-image: url('assets/img/fog-low.png')"></div>
 <div class="container">
@@ -26,7 +47,7 @@ include 'header.php';
                             <div class="main">
                             <h1 class="text-center" id="loadxpress">LoadXpress</h1>
                                 <h3 class="name">L'envoi simple & rapide</h3>
-                                <p class="text-center">Qui sommes nous ? <br>Une jeune équipe dynamique et motivée qui vient à votre secours pour vos transferts de fichiers !</p>
+                                <p class="text-center">Qui sommes-nous ? <br>Une jeune équipe dynamique et motivée qui vient à votre secours pour vos transferts de fichiers !</p>
                                 </div>
                                 <p class="text-center">Tu as pleins de fichiers à envoyer ?<br>N'hésites pas
                                 une seconde ! <br>Clique juste en dessous<i class="fas fa-smile-wink"></i></p>
@@ -47,7 +68,7 @@ include 'header.php';
                             <img class="img" src="assets/img/plume.png"/>
                         </div>
                         <div class="content">
-                            <form id="contact" action="Envoi" method="POST" enctype="multipart/form-data">
+                            <form id="contact" action="Home" method="POST" enctype="multipart/form-data">
                                 <!-- <span class="textnone"><?= $upload_status ?></span> -->
                                 
                                 <div class="fichier-upload">
@@ -157,6 +178,11 @@ include 'header.php';
                 return true;
             }
         }
+
+        let fermermodal = document.getElementById('fermermodal');
+        fermermodal.addEventListener('click', function(){
+            document.getElementById('modalenvoi').style.display = "none";
+        });
 
         //verif presence de fichiers
         var upload = document.getElementById('uploadlabel');
