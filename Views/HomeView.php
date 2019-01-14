@@ -27,7 +27,7 @@ include 'header.php';
         <input type="text" id="partage">
         </div>
         </div>
-    <?php
+        <?php
 } 
 ?>
 
