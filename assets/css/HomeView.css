@@ -210,7 +210,7 @@ fieldset {
 
 .modaldiv{
   position: absolute;
-  left: 107%;
+  left: 112%;
   padding: 15px;
   background: #754343ba;
   border-radius: 5px;
@@ -260,7 +260,41 @@ fieldset {
   color: white;
 }
 
+#modalenvoi{
+  z-index: 100;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100vh;
+  color: black;
+}
 
+#envoimodalcontent{
+  max-width: 550px;
+  padding: 10px;
+  background: white;
+  border-radius: 30px;
+  width: 50%;
+  margin: 100px auto;
+}
+
+#envoititle{
+  text-align: center;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.97), 0 0 25px #dbdcde, 0 0 5px #0808ff80;
+}
+
+#envoilien{
+  text-align: center;
+  font-size: 1.2em;
+}
+
+#partage{
+  display: block;
+  margin: auto;
+  width: 80%;
+}
 
 @media (min-width: 576px) {
   

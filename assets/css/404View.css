@@ -52,20 +52,22 @@ position: absolute;
 	}
 }
 
-
-@media (min-width: 576px) { ... }
-.heading1{
-	font-size: 16px;
+@media (min-width: 576px) {
+	.heading1{
+		font-size: 16px;
+	}
 }
 
-@media (min-width: 768px) { ... }
-.heading1{
+
+@media (min-width: 768px) {
+	.heading1{
 	font-size: 18px;
+	}
 }
 
-@media (min-width: 992px) { ... }
-.heading1{
+
+@media (min-width: 992px) {
+	.heading1{
 	font-size: 20px;
+	}
 }
-
-@media (min-width: 1200px) { ... }
