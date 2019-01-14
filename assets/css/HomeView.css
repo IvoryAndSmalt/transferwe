@@ -2,7 +2,7 @@
 
 /* tous les styles sot à réaliser dans un format de 576 px; regler ensuite les problemes de taille d'ecran avec media queries */
 body{
-  background: url(../img/background1.png)  no-repeat!important;
+  background: url(../img/background1.png)  no-repeat !important;
 }
 
 h1 {
