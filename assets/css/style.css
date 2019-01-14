@@ -297,21 +297,7 @@ body {
 
 
 @media (min-width: 768px) {
-	#file {
-		width: 20%;
-		-webkit-transform: scale(1);
-		transform: scale(1);
-		-webkit-transition: .3s ease-in-out;
-		transition: .3s ease-in-out;
-		align-content: center;
-		margin-left: 40%;
-		padding-top: 55px;
-		
-	}
-	.text-center {
-		margin-top: 100px !important;
 	
-	}
   }
  
 
