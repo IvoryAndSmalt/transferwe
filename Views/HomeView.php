@@ -51,12 +51,12 @@ include 'header.php';
                             <img class="img" src="assets/img/plume.png"/>
                         </div>
                         <div class="content">
-                            <form id="contact" action="index.php" method="POST" enctype="multipart/form-data">
+                            <form id="contact" action="Envoi" method="POST" enctype="multipart/form-data">
                                 <!-- <span class="textnone"><?= $upload_status ?></span> -->
                                 
                                 <div class="fichier-upload">
                                
-                                    <label for="mon_fichier">
+                                    <label id="uploadlabel" for="mon_fichier">
                                     
                                         <img src="assets/img/oploado.png" id="upload"/>Ajoutez vos fichiers ici</label><br />
                                     </label>
@@ -166,6 +166,15 @@ include 'header.php';
                 return true;
             }
         }
+
+        //verif presence de fichiers
+        var upload = document.getElementById('uploadlabel');
+        var int = setInterval(function(){ 
+            if(document.getElementById("mon_fichier").value != "") {
+            upload.innerHTML = "1 fichier uploadé.";
+            clearInterval(int);
+            }
+        }, 1000);
 
         //on récupère la totalité du formulaire dans une variable
         var form = document.getElementById("contact"); 
