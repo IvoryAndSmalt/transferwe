@@ -2,12 +2,14 @@
 
 /* tous les styles sot à réaliser dans un format de 576 px; regler ensuite les problemes de taille d'ecran avec media queries */
 body{
+  overflow-x: hidden;
   background: url(../img/background1.png)  no-repeat !important;
 }
 
 h1 {
-	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.97), 0 0 25px #dbdcde, 0 0 5px #0808ff80;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.97), 0 0 25px #dbdcde, 0 0 5px #0808ff80;
 }
+
 * {
   margin: 0;
   padding: 0;
@@ -22,12 +24,10 @@ h1 {
 }
 
 .container {
-  max-width: 400px;
-  width: 55%;
-  height: 15%;
+  width: 20%;
   margin: 0 auto;
-  margin-top: -20px;
   position: relative;
+  min-width:350px;
 }
 
 #contact input[type="text"],
@@ -58,16 +58,14 @@ h1 {
 }
 
 
-.fichier-upload > input
-{
-    display: none!important;
+.fichier-upload>input {
+  display: none !important;
 }
 
-.fichier-upload img
-{
-  margin-right:10px;  
-  width: 65px!important;
-    cursor: pointer;
+.fichier-upload img {
+  margin-right: 10px;
+  width: 65px !important;
+  cursor: pointer;
 }
 
 fieldset {
@@ -78,7 +76,7 @@ fieldset {
   padding: 0;
   width: 100%;
   border-radius: 10px;
-  margin-top:10px!important;
+  margin-top: 10px !important;
 }
 
 #contact input[type="text"],
@@ -118,7 +116,7 @@ fieldset {
   width: 70%;
   align-content: center;
   border: none;
-  background: radial-gradient(circle at top left,  #4893D8,#085193) !important;
+  background: radial-gradient(circle at top left, #4893D8, #085193) !important;
   color: #FCF5F5;
   margin: 0 0 15px;
   display: block;
@@ -127,7 +125,6 @@ fieldset {
   padding: 10px;
   font-size: 20px;
   border-radius: 10px;
-  margin-top: 10px;
   margin-bottom:10px;
 }
 
@@ -185,30 +182,33 @@ fieldset {
 .retour button{
       background-image: radial-gradient(circle at top left, #FFAA00, rgba(255, 99, 0, 0.85))!important;
       height:40px;
-      margin-top:20px;
+    
 }
 
 .fa-undo-alt:before {
   color: whitesmoke;
-  font-size:20px;
-  vertical-align:center;
+  font-size: 20px;
+  vertical-align: center;
 }
 
 /**************MODALS************/
-#fsdest{
-  position: relative;
-}
-#fsnom{
-  position: relative;
-}
-#fsexped{
-  position: relative;
-}
-#fsmessage{
+#fsdest {
   position: relative;
 }
 
-.modaldiv{
+#fsnom {
+  position: relative;
+}
+
+#fsexped {
+  position: relative;
+}
+
+#fsmessage {
+  position: relative;
+}
+
+.modaldiv {
   position: absolute;
   left: 112%;
   padding: 15px;
@@ -218,24 +218,24 @@ fieldset {
   opacity: 0;
 }
 
-.modaldiv p{
+.modaldiv p {
   margin: 0;
   color: white;
 }
 
-.modaldiv::after{
+.modaldiv::after {
   right: 100%;
-	top: 50%;
-	border: solid transparent;
-	content: " ";
-	height: 0;
-	width: 0;
-	position: absolute;
-	pointer-events: none;
-	border-color: transparent;
-	border-right-color: grey;
-	border-width: 5px;
-	margin-top: -5px;
+  top: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: transparent;
+  border-right-color: grey;
+  border-width: 5px;
+  margin-top: -5px;
 }
 
 #mobilemodal{
@@ -251,15 +251,16 @@ fieldset {
   margin: auto;
   z-index: 99;
 }
-#mobilemodal::after{
+
+#mobilemodal::after {
   display: none;
 }
 
-#mobilemodal p{
+#mobilemodal p {
   color: white;
 }
 
-#modalenvoi{
+#modalenvoi {
   z-index: 100;
   position: absolute;
   left: 0;
@@ -302,23 +303,81 @@ fieldset {
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.97), 0 0 25px #dbdcde, 0 0 5px #0808ff80;
 }
 
-#envoilien{
+#envoilien {
   text-align: center;
   font-size: 1.2em;
 }
 
-#partage{
+#partage {
   display: block;
   margin: auto;
   width: 80%;
 }
 
-@media (min-width: 576px) {
+@media (max-width: 576px) {
   
+  .container{
+    width: 90% ;
+    max-width: 375px;
+    padding-top: 40px;
+    min-width: initial;
+  }
+ 
+}
+
+@media (min-width: 576px) {
   #mobilemodal{
     display: none;
   }
-  .container{
-    max-width: 400px;
-  }
 }
+/* @media (min-width: 912px) {
+
+   .container{
+     width: 40%;
+     padding-top: 40px;
+   }
+ 
+ }
+
+@media (min-width: 768px) {
+ 
+ 
+  h3.name{
+     font-size:18px;
+   }
+   .card-container, .front, .back{
+     height:540px !important;
+   }
+   .container{
+     width: 60%;
+     padding-top: 40px;
+   }
+   .card .name{
+     margin-top: 20px !important;
+   }
+   .card .footer {
+    padding: 40px 40px 0;
+    
+}
+ 
+ }
+
+ 
+@media (max-width: 320px) {
+ 
+ h3.name{
+    font-size:16px;
+  }
+  .card-container, .front, .back{
+    height:540px !important;
+  }
+  .container{
+    width: 100%;
+    padding-top: 40px;
+  }
+  .card .name{
+    margin-top: 20px !important;
+  }
+
+
+} */
