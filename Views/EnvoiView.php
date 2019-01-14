@@ -5,9 +5,7 @@ include 'header.php';
 
 ?>
 </head>
-<link rel="stylesheet" href="assets/css/Envoi.css">
-
-    <a href="Home" ><img id="logo" src="assets/img/logo.png" alt="Logo"></a>
+<a href="Home" ><img id="logo" src="assets/img/logo.png" alt="Logo"></a>
 <body>
 
 <div class="container">
@@ -18,8 +16,5 @@ include 'header.php';
     </div>
     
 </div>
-
-
-
 <?php
 include 'footer.php';

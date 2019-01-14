@@ -1,13 +1,10 @@
 <?php
-$host='oui';
+
 include('info.php');
-
 	$dbh->setAttribute(PDO::ATTR_EMULATE_PREPARES, true);
-
 	//Cette fonction est appelée au début du controller, elle sert à vérifier les doublons de codes uniques.
 function getAllFiles(){
 	global $dbh;
-
 	$all_files = $dbh->prepare('SELECT * FROM fichiers');
 	$all_files->execute();
 
