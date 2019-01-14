@@ -9,10 +9,8 @@ $codeg = $_GET['codeg'];
 $my_download = getOneLink($codeg);
 
 foreach($my_download as $value){
-    echo "nom = " .$nom = $value['nom'];
-    echo "<br>";
-    echo "lien = " .$lien = $value['lien'];
-    echo "<br>";
+    $nom = $value['nom'];
+    $lien = $value['lien'];
 };
 
 include('Views/DownloadView.php');
