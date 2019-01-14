@@ -4,6 +4,7 @@ include 'header.php';
 ?>
 <link rel="stylesheet" href="assets/css/HomeView.css">
 <link href="assets/css/rotating-card.css" rel="stylesheet" />
+
 <a href="Home" ><img id="logo" src="assets/img/logo.png" alt="Logo"></a>
 
 <div class="modaldiv" id="mobilemodal">
@@ -11,6 +12,24 @@ include 'header.php';
         Un des champs semble être incorrect. Veuillez vérifier les informations.
     </p>
 </div>
+
+<?php if(isset($lien)){
+    ?>
+        <div id="modalenvoi">
+        <div id="envoimodalcontent">
+        <h2 id="envoititle">
+            Félicitations, votre fichier est en ligne !<br>
+            Votre correspondant a reçu un email permettant d'y accéder. 
+        </h2>
+        <h3 id="envoilien">
+            Vous pouvez aussi utiliser le lien de partage ci-dessous :
+        </h3>
+        <input type="text" id="partage">
+        </div>
+        </div>
+    <?php
+} 
+?>
 
 <div class="moving-fog" style ="background-image: url('assets/img/fog-low.png')"></div>
 <div class="container">
@@ -51,7 +70,7 @@ include 'header.php';
                             <img class="img" src="assets/img/plume.png"/>
                         </div>
                         <div class="content">
-                            <form id="contact" action="Envoi" method="POST" enctype="multipart/form-data">
+                            <form id="contact" action="Home" method="POST" enctype="multipart/form-data">
                                 <!-- <span class="textnone"><?= $upload_status ?></span> -->
                                 
                                 <div class="fichier-upload">
