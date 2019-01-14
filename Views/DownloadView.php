@@ -7,7 +7,7 @@ include 'header.php';
 </head>
 
 
-    <img id="logo" src="assets/img/logo.png" alt="Logo" href="Home">
+<a href="Home" ><img id="logo" src="assets/img/logo.png" alt="Logo"></a>
   
 
 <body>

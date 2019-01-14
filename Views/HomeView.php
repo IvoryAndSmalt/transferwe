@@ -4,7 +4,7 @@ include 'header.php';
 ?>
 <link rel="stylesheet" href="assets/css/HomeView.css">
 <link href="assets/css/rotating-card.css" rel="stylesheet" />
-<img id="logo" src="assets/img/logo.png" alt="Logo" href="Home">
+<a href="Home" ><img id="logo" src="assets/img/logo.png" alt="Logo"></a>
 
 <div class="modaldiv" id="mobilemodal">
     <p id="mobilemodalp">
