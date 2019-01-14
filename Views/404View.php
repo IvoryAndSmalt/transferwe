@@ -9,9 +9,9 @@ include 'header.php';
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-        <h1 > SORRY : Error 404</h1><br>
+        <h1 class="heading1" > SORRY : Error 404</h1><br>
             <h4> Notre équipe tente de régler ce problème, veuillez recharger la page ultérieurement svp</h4>
-            <h3>L'équipe LoadXpress.</h3>
+            <h1 class="heading1">L'équipe LoadXpress.</h1>
         </div>
     </div>
 </div>
