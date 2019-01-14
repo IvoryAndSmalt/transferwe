@@ -36,7 +36,10 @@ position: absolute;
 	-webkit-animation: cloudLoop 80s linear infinite;
 	animation: cloudLoop 80s linear infinite;
 }
+.heading1{
+	font-size: 24px;
 
+}
 @keyframes cloudLoop {
 	0% {
 		-webkit-transform: translate3d(0, 0, 0);
@@ -48,3 +51,21 @@ position: absolute;
 		transform: translate3d(-50%, 0, 0);
 	}
 }
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+.heading1{
+	font-size: 16px;
+}
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+.heading1{
+	font-size: 18px;
+}
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+.heading1{
+	font-size: 20px;
+}
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
