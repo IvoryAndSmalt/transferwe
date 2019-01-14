@@ -1,5 +1,4 @@
 <?php
-
 if(isset($_GET['page']) && !empty($_GET['page'])) {
   if($_GET['page']=== "test"){
         $page = '404';
@@ -7,8 +6,6 @@ if(isset($_GET['page']) && !empty($_GET['page'])) {
     }
     else {$page = $_GET['page'];}
 }
-
-
 
 else {
     $page = 'Home';

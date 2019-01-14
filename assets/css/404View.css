@@ -2,7 +2,8 @@
 body{
     background:rgb(9, 1, 24)!important;
     /* background: linear-gradient(60deg,  rgb(9, 1, 24),  rgba(4, 15, 58, 0.966))!important; */
-    background-image:none;
+	background-image:none;
+	color:white;
 }
 /* #canvas{
 position: absolute;
