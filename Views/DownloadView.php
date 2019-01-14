@@ -4,8 +4,7 @@ $title = "TransferWe : Download";
 include 'header.php';
 
 ?>
-</head>
-
+<link rel="stylesheet" href="assets/css/HomeView.css">  
 
 <a href="Home" ><img id="logo" src="assets/img/logo.png" alt="Logo"></a>
   

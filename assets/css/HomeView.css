@@ -1,6 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300,600,400italic);
 
 /* tous les styles sot à réaliser dans un format de 576 px; regler ensuite les problemes de taille d'ecran avec media queries */
+body{
+  background: url(../img/background1.png)  no-repeat!important;
+}
 
 h1 {
 	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.97), 0 0 25px #dbdcde, 0 0 5px #0808ff80;
