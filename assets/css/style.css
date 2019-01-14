@@ -104,6 +104,7 @@ section {
 
 body {
 	line-height: 1;
+
 }
 
 ol,
@@ -148,7 +149,6 @@ textarea {
 body {
 	
 	background: url(../img/background1.png)  no-repeat!important;
-	background-size: cover !important;
 	overflow: hidden;
 	font-family: "Roboto", Helvetica, Arial, sans-serif;
 	font-weight: 100;
