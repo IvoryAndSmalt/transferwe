@@ -15,7 +15,7 @@ include 'header.php';
 <div class="moving-fog" style ="background-image: url('assets/img/fog-low.png')"></div>
 <div class="container">
     <div class="row">
-        <div class="col-sm-10 col-sm-offest-1">
+        <!--<div class="col-sm-10 col-sm-offest-1">-->
              <div class="card-container manual-flip">
                 <div class="card">
                     <div class="front">
@@ -24,9 +24,9 @@ include 'header.php';
                         </div>
                         <div class="content">
                             <div class="main">
-                            <h1 class="text-center">LoadXpress</h1>
+                            <h1 class="text-center" id="loadxpress">LoadXpress</h1>
                                 <h3 class="name">L'envoi simple & rapide</h3>
-                                <p class="text-center">Qui sommes nous ? <br>Une jeune équipe dynamique et motivée qui viennent à votre secours pour vos transferts de fichiers !</p>
+                                <p class="text-center">Qui sommes nous ? <br>Une jeune équipe dynamique et motivée qui vient à votre secours pour vos transferts de fichiers !</p>
                                 </div>
                                 <p class="text-center">Tu as pleins de fichiers à envoyer ?<br>N'hésites pas
                                 une seconde ! <br>Clique juste en dessous<i class="fas fa-smile-wink"></i></p>
@@ -36,11 +36,7 @@ include 'header.php';
                                     </i> <i class="fas fa-file-export"> <br></i>Partager
                                 </button>
                             </div>
-                            <div class="social-links text-center">
-                                <a href="" class="facebook"><i class="fab fa-facebook-square"></i></a>
-                                <a href="" class="google"><i class="fab fa-google-plus-g"></i></a>
-                                <a href="" class="twitter"><i class="fab fa-twitter"></i></a>
-                            </div>
+                          
                      
                     </div> <!-- end front panel -->
 
@@ -113,17 +109,12 @@ include 'header.php';
                                 <i class="fas fa-undo-alt"></i><br>
                                 </button>
                             </div>
-                            <div class="social-links text-center">
-                                <a href="" class="facebook"><i class="fab fa-facebook-square"></i></a>
-                                <a href="" class="google"><i class="fab fa-google-plus-g"></i></a>
-                                <a href="" class="twitter"><i class="fab fa-twitter"></i></a>
-                            </div>
                     </div> <!-- end back panel -->
                 </div> 
              </div> 
             </div>
             
-        </div>
+        <!--</div>-->
     </div>
    
 </div>
