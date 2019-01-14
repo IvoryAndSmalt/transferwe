@@ -147,12 +147,13 @@ textarea {
 
 /* tous les styles sont à réaliser dans un format de 576 px; regler ensuite les problemes de taille d'ecran avec media queries */
 body {
-	overflow: hidden;
+	overflow-x: hidden;
 	font-family: "Roboto", Helvetica, Arial, sans-serif;
 	font-weight: 100;
 	font-size: 12px;
 	line-height: 30;
 	color: #777;
+	min-height: 800px;
 }
 /* HEADER */
 
@@ -194,7 +195,11 @@ body {
 	text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.97), 0 0 25px #dbdcde, 0 0 5px #0808ff80;
 }
 
-
+/* page envoi */
+#envoiimg{
+	margin:auto;
+	width: 5%;
+}
 /* page 404 & home */
 .moving-fog {
 	position: absolute;
@@ -221,6 +226,11 @@ body {
 
 
 
+@media (min-width: 576px) {
+	#exemple{
+		 width: 50%;
+	  }
+}
 
 
 /* .container{
