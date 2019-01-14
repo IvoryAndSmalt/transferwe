@@ -13,22 +13,24 @@ include 'header.php';
     </p>
 </div>
 
-<?php if(isset($lien)){
+<?php 
     ?>
         <div id="modalenvoi">
-        <div id="envoimodalcontent">
-        <h2 id="envoititle">
-            Félicitations, votre fichier est en ligne !<br>
-            Votre correspondant a reçu un email permettant d'y accéder. 
-        </h2>
-        <h3 id="envoilien">
-            Vous pouvez aussi utiliser le lien de partage ci-dessous :
-        </h3>
-        <input type="text" id="partage">
-        </div>
+            
+            <div id="envoimodalcontent">
+            <p id="fermermodal">X</p>
+                <h2 id="envoititle">
+                    Félicitations, votre fichier est en ligne !<br>
+                    Votre correspondant a reçu un email permettant d'y accéder. 
+                </h2>
+                <h3 id="envoilien">
+                    Vous pouvez aussi utiliser le lien de partage ci-dessous :
+                </h3>
+                <input onClick="this.select();" type="text" id="partage" value="<?=$lien?>">
+            </div>
         </div>
         <?php
-} 
+ 
 ?>
 
 <div class="moving-fog" style ="background-image: url('assets/img/fog-low.png')"></div>
@@ -185,6 +187,11 @@ include 'header.php';
                 return true;
             }
         }
+
+        let fermermodal = document.getElementById('fermermodal');
+        fermermodal.addEventListener('click', function(){
+            document.getElementById('modalenvoi').style.display = "none";
+        });
 
         //verif presence de fichiers
         var upload = document.getElementById('uploadlabel');
